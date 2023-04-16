@@ -1,0 +1,27 @@
+### TASK ###
+Game space where an Agent must cross a frozen lake without falling into any Holes (H) by walking over Frozen (F) lake.
+Agent may not moves probabilistically, emulating 'slippage' on the Frozen lake (F).
+
+### ACTION-SPACE ###
+Agent takes a 1-element vector for actions, denoting the direction in which to move.
+action_space = {0: Left, 1: Down, 2: Right, 3: Up}
+
+### STATE-OBSERVATION SPACE ###
+start, frozen, hole, goal = {S,F,H,G}
+
+"4x4":[
+    "SFFF",
+    "FHFH",
+    "FFFH",
+    "HFFG"
+    ]
+
+Possibility space = 4 * 4 Matrix, given by the maps size and deinition
+
+### INCENTIVE SCHEME ###
+Goal += 1
+Hole += 0
+Frozen += 0
+
+
+
